@@ -1,0 +1,952 @@
+#hr-home-page {
+  /* Testimonials */
+  .section-testimonial,
+  #home-testimonial {
+    height: 40.625vw;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .next-slide,
+    .prev-slide {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: calc(50% - 25px);
+      cursor: pointer;
+
+      .shape-holder {
+        width: 50px;
+        height: 50px;
+        border: 3px solid $oppo;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    .next-slide {
+      right: 50px;
+      animation: arrowMove 1s linear infinite;
+
+      .shape-holder {
+        border-bottom: 0;
+        border-left: 0;
+      }
+    }
+
+    .prev-slide {
+      left: 50px;
+      animation: arrowMove 1s 0.5s linear infinite;
+
+      .shape-holder {
+        border-top: 0;
+        border-right: 0;
+      }
+    }
+
+    .bg-effect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      .decor-circle {
+        position: absolute;
+
+        .img-holder {
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        &.circle-1 {
+          width: 79%;
+          top: -123%;
+          left: 5%;
+          opacity: 0.8;
+          -webkit-animation: rotating 125s linear infinite;
+          animation: rotating 125s linear infinite;
+        }
+
+        &.circle-2 {
+          width: 38%;
+          top: -33%;
+          left: 75%;
+          opacity: 0.6;
+          -webkit-animation: rotating 59s linear infinite;
+          animation: rotating 59s linear infinite;
+        }
+
+        &.circle-3 {
+          width: 31%;
+          top: 53%;
+          left: -11%;
+          opacity: 0.5;
+          -webkit-animation: rotating 38s linear infinite reverse;
+          animation: rotating 38s linear infinite reverse;
+        }
+      }
+    }
+
+    .main-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      .container {
+        height: 100%;
+
+        .testimonial-layout {
+          height: 60%;
+          top: 20%;
+          position: relative;
+          z-index: 2;
+          display: flex;
+
+          .member-image-slider-holder,
+          .member-quote-slider-holder {
+            height: 100%;
+            flex: 0;
+          }
+
+          .member-image-slider-holder {
+            width: 33.333%;
+            flex-basis: 33.333%;
+
+            .oppo-member-image-slider {
+              width: 100%;
+              height: 100%;
+
+              .slick-list,
+              .slick-track {
+                height: 100%;
+
+                div {
+                  height: 100%;
+                }
+              }
+
+              .member-img-item {
+                width: 100%;
+                height: 100%;
+                display: block !important;
+                padding-right: 30px;
+                opacity: 0;
+                transform: translateX(-20px);
+
+                * {
+                  height: 100%;
+                }
+
+                .img-holder {
+                  height: 100%;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    display: block;
+                  }
+                }
+              }
+
+              .slick-active {
+                .member-img-item {
+                  opacity: 1;
+                  -webkit-transform: translateX(0);
+                  transform: translateX(0);
+                  transition: all ease-out 400ms 400ms;
+                }
+              }
+            }
+          }
+
+          .member-quote-slider-holder {
+            width: 66.666%;
+            flex-basis: 66.666%;
+
+            .oppo-member-quote-slider {
+              height: 100%;
+
+              .slick-list,
+              .slick-track,
+              .slick-slide > div {
+                height: 100%;
+              }
+
+              .slick-slide > div {
+                display: flex;
+                align-items: center;
+              }
+
+              .quote-item {
+                height: 52%;
+                padding: 0 20px 20px 140px;
+                position: relative;
+
+                .decor {
+                  position: absolute;
+                  bottom: 100%;
+                  right: calc(100% - 120px);
+                  width: 70px;
+
+                  opacity: 0;
+                  transform-origin: bottom 100%;
+                  -webkit-transform: translateX(30px) scale(0.5);
+                  transform: translateX(30px) scale(0.5);
+
+                  .img-holder {
+                    img {
+                      display: block;
+                      width: 100%;
+                    }
+                  }
+                }
+
+                .context {
+                  opacity: 0;
+                  -webkit-transform: translateX(30px);
+                  transform: translateX(30px);
+
+                  .member-name {
+                    font-size: 35px;
+                    line-height: 1.15;
+                    margin-bottom: 0;
+                  }
+                  .member-role {
+                    font-size: 25px;
+                    margin-bottom: 13.5px;
+                  }
+                  .member-quote {
+                    text-align: justify;
+                  }
+                }
+              }
+
+              .slick-active {
+                .quote-item {
+                  .decor,
+                  .context {
+                    opacity: 1;
+                    -webkit-transform: translateX(0) scale(1);
+                    transform: translateX(0) scale(1);
+                    transition: all ease-out 500ms;
+                  }
+
+                  .decor {
+                    transition: all ease-out 400ms 200ms;
+                  }
+                }
+              }
+
+              .slick-dots {
+                display: flex;
+                padding-left: 140px;
+                position: absolute;
+                bottom: 2.5%;
+
+                li {
+                  margin: 0 6px;
+
+                  &:first-child {
+                    margin-left: 0;
+                  }
+
+                  button {
+                    text-indent: -9999px;
+                    display: block;
+                    font-size: 1px;
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid $oppo;
+                    border-radius: 9px;
+                    padding: 0;
+                    background-color: transparent;
+                    outline: none;
+                  }
+
+                  &.slick-active {
+                    button {
+                      background-color: $oppo;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Testimonials - END */
+
+  @media #{$information-md-screen} {
+    .section-testimonial,
+    #home-testimonial {
+      height: 40.625vw;
+
+      .next-slide,
+      .prev-slide {
+        width: 40px;
+        height: 40px;
+        top: calc(50% - 20px);
+
+        .shape-holder {
+          width: 40px;
+          height: 40px;
+          border-width: 2px;
+        }
+      }
+
+      .next-slide {
+        right: 40px;
+      }
+
+      .prev-slide {
+        left: 40px;
+      }
+
+      .main-content {
+        .container {
+          height: 100%;
+
+          .testimonial-layout {
+            height: 62%;
+            top: 19%;
+
+            .member-image-slider-holder {
+              .oppo-member-image-slider {
+                .member-img-item {
+                  padding-right: 25px;
+                }
+              }
+            }
+
+            .member-quote-slider-holder {
+              .oppo-member-quote-slider {
+                .quote-item {
+                  height: 53%;
+                  padding: 0 18px 20px 130px;
+
+                  .decor {
+                    right: calc(100% - 118px);
+                    width: 66px;
+                  }
+
+                  .context {
+                    .member-name {
+                      font-size: 32.5px;
+                      line-height: 1.15;
+                      margin-bottom: 0;
+                    }
+                    .member-role {
+                      margin-bottom: 17.5px;
+                    }
+                  }
+                }
+
+                .slick-dots {
+                  padding-left: 130px;
+
+                  li {
+                    margin: 0 5px;
+
+                    button {
+                      width: 16px;
+                      height: 16px;
+                      border: 1px solid $oppo;
+                      border-radius: 8px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-screen} {
+    .section-testimonial,
+    #home-testimonial {
+      height: 45vw;
+
+      .next-slide,
+      .prev-slide {
+        width: 36px;
+        height: 36px;
+        top: calc(50% - 18px);
+
+        .shape-holder {
+          width: 36px;
+          height: 36px;
+          border-width: 2px;
+        }
+      }
+
+      .next-slide {
+        right: 36px;
+      }
+
+      .prev-slide {
+        left: 36px;
+      }
+
+      .main-content {
+        .container {
+          height: 100%;
+          padding: 0 30px;
+
+          .testimonial-layout {
+            height: 64%;
+            top: 18%;
+
+            .member-image-slider-holder {
+              .oppo-member-image-slider {
+                .member-img-item {
+                  padding-right: 25px;
+                }
+              }
+            }
+
+            .member-quote-slider-holder {
+              .oppo-member-quote-slider {
+                .quote-item {
+                  height: 53%;
+                  padding: 0 18px 20px 110px;
+
+                  .decor {
+                    right: calc(100% - 105px);
+                    width: 60px;
+                  }
+
+                  .context {
+                    .member-name {
+                      font-size: 28.5px;
+                      line-height: 1.15;
+                      margin-bottom: 0;
+                    }
+                    .member-role {
+                      font-size: 18.5px;
+                      margin-bottom: 15px;
+                    }
+                  }
+                }
+
+                .slick-dots {
+                  padding-left: 110px;
+
+                  li {
+                    margin: 0 5px;
+
+                    button {
+                      width: 14px;
+                      height: 14px;
+                      border: 1px solid $oppo;
+                      border-radius: 7px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-laptop} {
+    .section-testimonial,
+    #home-testimonial {
+      height: 48vw;
+
+      .main-content {
+        .container {
+          .testimonial-layout {
+            .member-quote-slider-holder {
+              .oppo-member-quote-slider {
+                .quote-item {
+                  .context {
+                    .member-name {
+                      font-size: 26.5px;
+                      line-height: 1.15;
+                      margin-bottom: 0;
+                    }
+                    .member-role {
+                      font-size: 20px;
+                      margin-bottom: 15px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-tablet} {
+    .section-testimonial,
+    #home-testimonial {
+      height: auto;
+      padding-top: 10vw;
+
+      .next-slide,
+      .prev-slide {
+        width: 40px;
+        height: 40px;
+        top: calc(50% - 20px);
+
+        .shape-holder {
+          width: 40px;
+          height: 40px;
+          border-width: 2px;
+        }
+      }
+
+      .next-slide {
+        right: 20px;
+      }
+
+      .prev-slide {
+        left: 20px;
+      }
+
+      .bg-effect {
+        .decor-circle {
+          &.circle-1 {
+            width: 139%;
+            top: -10%;
+            left: 25%;
+          }
+
+          &.circle-2 {
+            width: 38%;
+            top: 7%;
+            left: -15%;
+          }
+
+          &.circle-3 {
+            width: 51%;
+            top: 33%;
+            left: -28%;
+            opacity: 1;
+          }
+        }
+      }
+
+      .main-content {
+        position: relative;
+
+        .container {
+          height: 100%;
+          padding: 0 100px;
+
+          .testimonial-layout {
+            height: auto;
+            top: 0;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+
+            .member-image-slider-holder,
+            .member-quote-slider-holder {
+              height: auto;
+            }
+
+            .member-image-slider-holder {
+              width: 100%;
+              flex-basis: 100%;
+
+              .oppo-member-image-slider {
+                .member-img-item {
+                  width: 100%;
+                  height: 100%;
+                  display: block !important;
+                  padding: 0;
+                  opacity: 0;
+                  transform: translate(0);
+                }
+
+                .slick-active {
+                  .member-img-item {
+                    opacity: 1;
+                    -webkit-transform: translate(0);
+                    transform: translate(0);
+                    transition: all ease-out 400ms 300ms;
+                  }
+                }
+              }
+            }
+
+            .member-quote-slider-holder {
+              width: 100%;
+              flex-basis: 100%;
+              margin-top: 0;
+              margin-bottom: 50px;
+              padding: 5vw 0;
+              height: auto;
+
+              .oppo-member-quote-slider {
+                height: 100%;
+
+                .slick-list,
+                .slick-track,
+                .slick-slide > div {
+                  height: 100%;
+                }
+
+                .slick-slide > div {
+                  display: flex;
+                  align-items: center;
+                }
+
+                .quote-item {
+                  height: 40vw;
+                  padding: 7vw 0 0;
+
+                  .decor {
+                    position: absolute;
+                    bottom: auto;
+                    right: 20%;
+                    top: 0;
+                    width: 70px;
+
+                    opacity: 0;
+                    transform-origin: bottom 100%;
+                    -webkit-transform: translateX(0) scale(-0.5, 0.5);
+                    transform: translateX(0) scale(-0.5, 0.5);
+
+                    .img-holder {
+                      img {
+                        display: block;
+                        width: 100%;
+                      }
+                    }
+                  }
+
+                  .context {
+                    position: absolute;
+                    top: 5vw;
+                    left: 0;
+                    right: 0;
+                    opacity: 0;
+                    -webkit-transform: translate(0, 20px);
+                    transform: translate(0, 20px);
+
+                    .member-name {
+                      font-size: 32px;
+                      line-height: 1.15;
+                      margin-bottom: 0;
+                    }
+                    .member-role {
+                      font-size: 22.5px;
+                      margin-bottom: 22.5px;
+                    }
+                    .member-quote {
+                      text-align: justify;
+                    }
+                  }
+                }
+
+                .slick-active {
+                  .quote-item {
+                    .decor,
+                    .context {
+                      opacity: 1;
+                      -webkit-transform: translate(0) scale(1);
+                      transform: translate(0) scale(1);
+                      transition: all ease-out 500ms;
+                    }
+
+                    .decor {
+                      -webkit-transform: translateX(0) scale(-1, 1);
+                      transform: translateX(0) scale(-1, 1);
+                      transition: all ease-out 400ms 200ms;
+                    }
+                  }
+                }
+
+                .slick-dots {
+                  display: flex;
+                  padding-left: 0;
+                  bottom: auto;
+                  top: 105%;
+                  width: 100%;
+                  justify-content: center;
+
+                  li {
+                    margin: 0 6px;
+
+                    &:first-child {
+                      margin-left: 0;
+                    }
+
+                    button {
+                      width: 18px;
+                      height: 18px;
+                      border: 1px solid $oppo;
+                      border-radius: 9px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .grad-overlay {
+        height: 22vw;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .section-testimonial,
+    #home-testimonial {
+      padding-top: 8vw;
+
+      .next-slide,
+      .prev-slide {
+        width: 30px;
+        height: 30px;
+        top: calc(50% - 15px);
+        z-index: 5;
+
+        .shape-holder {
+          width: 30px;
+          height: 30px;
+          border-width: 2px;
+        }
+      }
+
+      .next-slide {
+        right: 15px;
+      }
+
+      .prev-slide {
+        left: 15px;
+      }
+
+      .main-content {
+        position: relative;
+
+        .container {
+          height: 100%;
+          padding: 0 55px;
+
+          .testimonial-layout {
+            .member-image-slider-holder {
+              .oppo-member-image-slider {
+                .member-img-item {
+                  .img-holder {
+                    height: 71vw;
+                  }
+                }
+              }
+            }
+
+            .member-quote-slider-holder {
+              margin-bottom: 30px;
+              padding: 3.5vw 0;
+              height: auto;
+
+              .oppo-member-quote-slider {
+                height: 100%;
+
+                .slick-list,
+                .slick-track,
+                .slick-slide > div {
+                  height: 100%;
+                }
+
+                .slick-slide > div {
+                  display: flex;
+                  align-items: center;
+                }
+
+                .quote-item {
+                  height: 77vw;
+                  padding: 5vw 0 0;
+
+                  .decor {
+                    right: 12%;
+                    top: 0;
+                    width: 40px;
+                  }
+
+                  .context {
+                    top: 5vw;
+
+                    .member-name {
+                      font-size: 22.5px;
+                      line-height: 1.15;
+                      margin-bottom: 0;
+                    }
+                    .member-role {
+                      font-size: 18.5px;
+                      margin-bottom: 10px;
+                    }
+                  }
+                }
+
+                .slick-dots {
+                  top: 105%;
+
+                  li {
+                    margin: 0 5px;
+
+                    &:first-child {
+                      margin-left: 0;
+                    }
+
+                    button {
+                      width: 12px;
+                      height: 12px;
+                      border: 1px solid $oppo;
+                      border-radius: 6px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .grad-overlay {
+        height: 22vw;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media #{$information-sm-phone} {
+    .section-testimonial,
+    #home-testimonial {
+      padding-top: 8vw;
+
+      .next-slide,
+      .prev-slide {
+        width: 24px;
+        height: 24px;
+        top: calc(50% - 12px);
+
+        .shape-holder {
+          width: 24px;
+          height: 24px;
+          border-width: 2px;
+        }
+      }
+
+      .next-slide {
+        right: 12px;
+      }
+
+      .prev-slide {
+        left: 12px;
+      }
+
+      .main-content {
+        position: relative;
+
+        .container {
+          height: 100%;
+          padding: 0 45px;
+
+          .testimonial-layout {
+            .member-image-slider-holder {
+              .oppo-member-image-slider {
+                .member-img-item {
+                  .img-holder {
+                    height: 74vw;
+                  }
+                }
+              }
+            }
+
+            .member-quote-slider-holder {
+              margin-bottom: 30px;
+              padding: 3.5vw 0;
+              height: auto;
+
+              .oppo-member-quote-slider {
+                height: 100%;
+
+                .slick-list,
+                .slick-track,
+                .slick-slide > div {
+                  height: 100%;
+                }
+
+                .slick-slide > div {
+                  display: flex;
+                  align-items: center;
+                }
+
+                .quote-item {
+                  height: 75vw;
+                  padding: 5vw 0 0;
+
+                  .decor {
+                    right: 3%;
+                    top: 0;
+                    width: 32px;
+                  }
+
+                  .context {
+                    top: 5vw;
+
+                    .member-name {
+                      font-size: 20px;
+                      line-height: 1.15;
+                      margin-bottom: 0;
+                    }
+                    .member-role {
+                      font-size: 15px;
+                      margin-bottom: 7.5px;
+                    }
+                  }
+                }
+
+                .slick-dots {
+                  top: 105%;
+
+                  li {
+                    margin: 0 5px;
+
+                    &:first-child {
+                      margin-left: 0;
+                    }
+
+                    button {
+                      width: 12px;
+                      height: 12px;
+                      border: 1px solid $oppo;
+                      border-radius: 6px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .grad-overlay {
+        height: 22vw;
+        opacity: 0.7;
+      }
+    }
+  }
+}

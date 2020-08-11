@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 400;
+  src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "MyriadPro-Regular";
+  font-weight: 400;
+  src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  src: url("../fonts/MyriadPro-Semibold.otf");
+}
+
+@font-face {
+  font-family: "MyriadPro-Semibold";
+  font-weight: 600;
+  src: url("../fonts/MyriadPro-Semibold.otf");
+}
+
+@font-face {
+  font-family: "OPPOSans-Regular";
+  font-weight: 900;
+  src: url("../fonts/OPPOSans-R.woff2");
+}
+
+@font-face {
+  font-family: "OPPOSans-Medium";
+  font-weight: 400;
+  src: url("../fonts/OPPOSans-M.woff2");
+}
+
+@font-face {
+  font-family: "OPPOSans-Bold";
+  font-weight: 900;
+  src: url("../fonts/OPPOSans-B.woff2");
+}
+/* === TYPOGRAPHY === */
+* {
+  font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+  color: $txt-color;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 22.5px;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+.white-txt {
+  color: $white !important;
+
+  * {
+    color: $white !important;
+  }
+}
+
+.green-txt,
+.txt-green {
+  color: $oppo !important;
+
+  * {
+    color: $oppo !important;
+  }
+}
+
+.title {
+  font-size: 45px;
+  margin: 56.25px 0 50px;
+  font-weight: 400;
+}
+
+.sub-title {
+  font-size: 37px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 22.5px 0 1.5px;
+}
+
+.highlight {
+  font-size: 1.8em;
+  color: inherit;
+}
+
+.desc,
+p,
+.desc-item {
+  font-size: 22.5px;
+  line-height: 1.44;
+}
+
+.inline-img {
+  display: inline-block;
+  vertical-align: baseline;
+  line-height: 1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media #{$information-md-screen} {
+  a {
+    font-size: 22.5px;
+  }
+
+  .title {
+    font-size: 42px;
+    margin: 80px 0 35px;
+  }
+
+  .sub-title {
+    font-size: 34px;
+    margin: 20px 0 10px;
+  }
+
+  .highlight {
+    font-size: 1.75em;
+  }
+
+  .desc,
+  p,
+  .desc-item {
+    font-size: 22.5px;
+  }
+}
+
+@media #{$information-sm-screen} {
+  a {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 40px;
+    margin: 64px 0 33px;
+  }
+
+  .sub-title {
+    font-size: 32px;
+    margin: 16px 0 10px;
+  }
+
+  .highlight {
+    font-size: 1.75em;
+  }
+
+  .desc,
+  p,
+  .desc-item {
+    font-size: 20px;
+  }
+}
+
+@media #{$information-sm-laptop} {
+  a {
+    font-size: 18.5px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin: 50px 0 25px;
+  }
+
+  .sub-title {
+    font-size: 30px;
+    margin: 15px 0 8px;
+  }
+
+  .highlight {
+    font-size: 1.75em;
+  }
+
+  .desc,
+  p,
+  .desc-item {
+    font-size: 18.5px;
+  }
+}
+
+@media #{$information-lg-tablet} {
+  a {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin: 50px 0 25px;
+  }
+
+  .sub-title {
+    font-size: 26.25px;
+    margin: 20px 0 1.3125px;
+  }
+
+  .highlight {
+    font-size: 1.75em;
+  }
+
+  .desc,
+  p,
+  .desc-item {
+    font-size: 20px;
+  }
+}
+
+@media #{$information-tablet} {
+  a {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin: 40px 0 27.5px;
+  }
+
+  .sub-title {
+    font-size: 25px;
+    margin: 16px 0 0.01rem;
+  }
+
+  .highlight {
+    font-size: 1.75em;
+  }
+
+  .desc,
+  p,
+  .desc-item {
+    font-size: 20px;
+  }
+}
+
+@media #{$information-phone} {
+  a {
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 27.5px;
+    margin: 30px 0 15px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 12.5px 0 2.5px;
+  }
+
+  .highlight {
+    font-size: 1.75em;
+  }
+
+  .desc,
+  p,
+  .desc-item {
+    font-size: 15px;
+  }
+}
+
+@media #{$information-sm-phone} {
+  a {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 22.5px;
+    margin: 25px 0 20px;
+  }
+
+  .sub-title {
+    font-size: 18.5px;
+    margin: 11.5px 0 1.5px;
+  }
+
+  .highlight {
+    font-size: 1.5em;
+  }
+
+  .desc,
+  p,
+  .desc-item {
+    font-size: 13px;
+  }
+}

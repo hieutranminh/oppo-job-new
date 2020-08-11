@@ -1,0 +1,388 @@
+#hr-about-page {
+  /* Section OPPO Culture */
+  .section-about-culture,
+  #about-culture {
+    .main-content {
+      .content-head {
+        .title {
+          margin-bottom: 37.5px;
+        }
+      }
+      .content-body {
+        .oppo-culture-layout {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: 19.0105vw 19.0105vw;
+          grid-column-gap: 10px;
+          grid-row-gap: 10px;
+
+          .layout-block {
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .block-content {
+              width: 75%;
+
+              .block-title {
+                font-size: 30px;
+                font-weight: 400;
+                margin-bottom: 5px;
+              }
+
+              .block-desc {
+                margin-bottom: 0;
+                line-height: 1.5;
+
+                .desc-item {
+                  padding-left: 25px;
+                  position: relative;
+                  line-height: 1.5;
+
+                  &:before {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 6px;
+                    background-color: #21c34b;
+                    position: absolute;
+                    left: calc(11px - 6px);
+                    top: calc(13px - 6px);
+                  }
+                }
+              }
+            }
+
+            &.block-vision {
+              grid-column: 1;
+              grid-row: 1;
+              background-image: url("../img/about/culture-bg1-mb.jpg");
+            }
+
+            &.block-core-value {
+              grid-column: 1;
+              grid-row: 2;
+              background-image: url("../img/about/culture-bg2.jpg");
+            }
+
+            &.block-mission {
+              grid-row: 1 / span 2;
+              grid-column: 2;
+              background-image: url("../img/about/culture-bg3.jpg");
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Section OPPO Culture - END */
+
+  /* RESPONSIVE */
+  @media #{$information-md-screen} {
+    .section-about-culture,
+    #about-culture {
+      .main-content {
+        .content-head {
+          .title {
+            margin: 50px 0 25px;
+          }
+        }
+        .content-body {
+          .oppo-culture-layout {
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+
+            .layout-block {
+              .block-content {
+                .block-title {
+                  font-size: 28px;
+                  margin-bottom: 5px;
+                }
+
+                .block-desc {
+                  .desc-item {
+                    padding-left: 25px;
+
+                    &:before {
+                      width: 12px;
+                      height: 12px;
+                      border-radius: 6px;
+                      left: calc(12.5px - 6px);
+                      top: calc(13px - 6px);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-screen} {
+    .section-about-culture,
+    #about-culture {
+      .main-content {
+        .content-head {
+          .title {
+            margin-bottom: 20px;
+          }
+        }
+        .content-body {
+          .oppo-culture-layout {
+            grid-column-gap: 9px;
+            grid-row-gap: 9px;
+
+            .layout-block {
+              .block-content {
+                .block-title {
+                  font-size: 25px;
+                  margin-bottom: 5px;
+                }
+
+                .block-desc {
+                  .desc-item {
+                    padding-left: 20px;
+
+                    &:before {
+                      width: 10px;
+                      height: 10px;
+                      border-radius: 5px;
+                      left: calc(9px - 5px);
+                      top: calc(11px - 5px);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-laptop} {
+    .section-about-culture,
+    #about-culture {
+      .main-content {
+        .content-head {
+          .title {
+            margin-bottom: 17.5px;
+          }
+        }
+        .content-body {
+          .oppo-culture-layout {
+            grid-column-gap: 9px;
+            grid-row-gap: 9px;
+
+            .layout-block {
+              .block-content {
+                .block-title {
+                  font-size: 22.5px;
+                  margin-bottom: 3px;
+                }
+
+                .block-desc {
+                  .desc-item {
+                    padding-left: 17.5px;
+
+                    &:before {
+                      width: 8px;
+                      height: 8px;
+                      border-radius: 4px;
+                      left: calc(7.5px - 4px);
+                      top: calc(11px - 4px);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* TBALET */
+  @media #{$information-lg-tablet} {
+    .section-about-culture,
+    #about-culture {
+      .main-content {
+        .content-head {
+          .title {
+            margin-bottom: 20px;
+          }
+        }
+        .content-body {
+          .oppo-culture-layout {
+            grid-template-columns: 1fr;
+            grid-template-rows: 54.216vw 89.759vw 54.216vw;
+            grid-column-gap: 15px;
+            grid-row-gap: 15px;
+            padding: 0 15px;
+
+            .layout-block {
+              .block-content {
+                width: 80%;
+
+                .block-title {
+                  font-size: 22.5px;
+                  margin-bottom: 7.5px;
+                }
+
+                .block-desc {
+                  margin-bottom: 0;
+                  line-height: 1.5;
+
+                  .desc-item {
+                    padding-left: 25px;
+                    position: relative;
+                    line-height: 1.5;
+
+                    &:before {
+                      width: 10px;
+                      height: 10px;
+                      border-radius: 5px;
+                      left: calc(10px - 6px);
+                      top: calc(13px - 6px);
+                    }
+                  }
+                }
+              }
+
+              &.block-vision {
+                grid-column: 1;
+                grid-row: 1;
+                background-attachment: fixed;
+              }
+
+              &.block-core-value {
+                grid-column: 1;
+                grid-row: 3;
+                background-attachment: fixed;
+              }
+
+              &.block-mission {
+                grid-row: 2;
+                grid-column: 1;
+                background-attachment: fixed;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .section-about-culture,
+    #about-culture {
+      .main-content {
+        .content-head {
+          .title {
+            margin-bottom: 20px;
+          }
+        }
+        .content-body {
+          .oppo-culture-layout {
+            grid-column-gap: 13px;
+            grid-row-gap: 13px;
+            padding: 0 13px;
+
+            .layout-block {
+              .block-content {
+                width: 100%;
+                padding: 0 13px;
+
+                .block-title {
+                  font-size: 20px;
+                  margin-bottom: 4px;
+                  text-align: center;
+                }
+
+                p.block-desc {
+                  text-align: center;
+                }
+
+                .block-desc {
+                  margin-bottom: 0;
+                  line-height: 1.5;
+
+                  .desc-item {
+                    padding-left: 20px;
+                    line-height: 1.5;
+
+                    &:before {
+                      width: 8px;
+                      height: 8px;
+                      border-radius: 5px;
+                      left: calc(9px - 4px);
+                      top: calc(9px - 4px);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-phone} {
+    .section-about-culture,
+    #about-culture {
+      .main-content {
+        .content-head {
+          .title {
+            margin-bottom: 17.5px;
+          }
+        }
+        .content-body {
+          .oppo-culture-layout {
+            grid-column-gap: 13px;
+            grid-row-gap: 13px;
+            padding: 0 13px;
+
+            .layout-block {
+              .block-content {
+                width: 100%;
+                padding: 0 10px;
+
+                .block-title {
+                  font-size: 17.5px;
+                  margin-bottom: 2.5px;
+                }
+
+                p.block-desc {
+                  text-align: center;
+                }
+
+                .block-desc {
+                  margin-bottom: 0;
+                  line-height: 1.5;
+
+                  .desc-item {
+                    padding-left: 16px;
+                    line-height: 1.5;
+
+                    &:before {
+                      width: 6px;
+                      height: 6px;
+                      border-radius: 3px;
+                      left: calc(8px - 3px);
+                      top: calc(8px - 3px);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

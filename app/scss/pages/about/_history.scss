@@ -1,0 +1,1268 @@
+#hr-about-page {
+  /* OPPO History */
+  .section-about-history,
+  #about-history {
+    .container {
+      width: calc(100% - 140px);
+      position: relative;
+
+      .timeline-holder {
+        width: 100%;
+        overflow: hidden;
+        padding: 50px 0 30px;
+        position: relative;
+
+        .swiper-wrapper {
+          .history-item {
+            cursor: pointer;
+
+            .history-layout-wrapper {
+              display: grid;
+              grid-template-rows: 320px 80px;
+              position: relative;
+
+              .context-bg {
+                position: absolute;
+                height: 260px;
+                width: 80px;
+                top: 10px;
+                z-index: 1;
+                opacity: 0;
+
+                background-image: radial-gradient(
+                  rgba($oppo, 0.2),
+                  rgba($oppo, 0),
+                  rgba($oppo, 0)
+                );
+
+                transition: all ease-in 150ms;
+                transform: scale(0.2);
+
+                &.bg-left {
+                  left: calc(2% - 40px);
+                }
+
+                &.bg-right {
+                  right: calc(2% - 40px);
+                }
+              }
+
+              .context-holder {
+                display: grid;
+                grid-template-rows: 140px 180px;
+                position: relative;
+                background-color: $white;
+                z-index: 2;
+                width: 96%;
+                margin: 0 auto;
+
+                .history-detail {
+                  text-align: center;
+                  font-size: 22.5px;
+                  transition: all ease-in 150ms;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+
+                .history-icon {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  transition: all ease-in 150ms;
+                }
+              }
+
+              .history-marker {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                z-index: 6;
+
+                .marker-line {
+                  position: absolute;
+                  width: 40%;
+                  height: 1px;
+                  background-color: #333;
+                  top: 39px;
+
+                  &.line-left {
+                    left: 0;
+                  }
+
+                  &.line-right {
+                    right: 0;
+                  }
+                }
+
+                .marker-holder,
+                .marker-effect {
+                  width: 22px;
+                  height: 22px;
+                  border-radius: 50%;
+                  background-color: #76db8b;
+                  top: calc(50% - 11px);
+                  left: calc(50% - 11px);
+                  position: absolute;
+                  transition: all ease-in 150ms;
+                }
+
+                .marker-holder {
+                }
+
+                .marker-effect {
+                  z-index: 0;
+                  animation: wavingEffect infinite 2s linear;
+                }
+              }
+
+              .history-year {
+                padding: 5px 0;
+                font-size: 22.5px;
+                transition: all ease-in 150ms;
+              }
+            }
+
+            &:hover {
+              .history-layout-wrapper {
+                .context-bg {
+                  z-index: 4;
+                  opacity: 1;
+
+                  transition: all ease-out 420ms;
+                  -webkit-transform: scale(1.2);
+                  transform: scale(1.2);
+                }
+
+                .context-holder {
+                  z-index: 5;
+
+                  .history-detail {
+                    transition: all ease-out 420ms;
+                    -webkit-transform: scale(1.2) translateY(-5%);
+                    transform: scale(1.2) translateY(-5%);
+                  }
+
+                  .history-icon {
+                    transition: all ease-out 420ms;
+                    -webkit-transform: scale(1.2) translateY(1%);
+                    transform: scale(1.2) translateY(1%);
+                  }
+                }
+
+                .history-marker {
+                  .marker-holder,
+                  .marker-effect {
+                    background-color: $oppo;
+                  }
+
+                  .marker-holder {
+                    transition: all ease-out 420ms;
+                    transform: scale(1.15);
+                  }
+
+                  .marker-effect {
+                    z-index: 0;
+                    animation: wavingEffect2 infinite 2s linear;
+                  }
+                }
+
+                .history-year {
+                  color: $oppo;
+                  transform: scale(1.2);
+                  transition: all ease-out 420ms;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .button-prev,
+      .button-next {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: calc(81.5% - 25px);
+        cursor: pointer;
+        z-index: 3;
+        outline: none;
+
+        .shape-holder {
+          width: 50px;
+          height: 50px;
+          border: 3px solid $oppo;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+
+      .button-next {
+        right: -25px;
+        animation: arrowMove 1s linear infinite;
+
+        .shape-holder {
+          border-bottom: 0;
+          border-left: 0;
+        }
+      }
+
+      .button-prev {
+        left: -25px;
+        animation: arrowMove 1s 0.5s linear infinite;
+
+        .shape-holder {
+          border-top: 0;
+          border-right: 0;
+        }
+      }
+
+      .history-pagination {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          border: 1px solid $oppo;
+          border-radius: 6px;
+          background: transparent;
+          opacity: 1;
+
+          &.swiper-pagination-bullet-active {
+            background-color: $oppo;
+          }
+        }
+      }
+    }
+  }
+  /* OPPO History - END */
+
+  /* RESPONSIVE */
+  @media #{$information-md-screen} {
+    .section-about-history,
+    #about-history {
+      .container {
+        width: calc(100% - 120px);
+
+        .timeline-holder {
+          padding: 44px 0 26.25px;
+
+          .swiper-wrapper {
+            .history-item {
+              .history-layout-wrapper {
+                grid-template-rows: 280px 70px;
+
+                .context-bg {
+                  height: 260px;
+                  width: 70px;
+                  top: 10px;
+
+                  &.bg-left {
+                    left: calc(2% - 35px);
+                  }
+
+                  &.bg-right {
+                    right: calc(2% - 35px);
+                  }
+                }
+
+                .context-holder {
+                  grid-template-rows: 120px 160px;
+
+                  .history-detail {
+                    font-size: 20px;
+                  }
+                }
+
+                .history-marker {
+                  .marker-line {
+                    top: 34px;
+                  }
+
+                  .marker-holder,
+                  .marker-effect {
+                    width: 20px;
+                    height: 20px;
+                    top: calc(50% - 10px);
+                    left: calc(50% - 10px);
+                  }
+                }
+
+                .history-year {
+                  padding: 4.375px 0;
+                  font-size: 20px;
+                }
+              }
+
+              // Individual Year
+              &.item-2001,
+              &.item-2006,
+              &.item-2021 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 27%;
+                        max-height: 105px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2012,
+              &.item-2013,
+              &.item-2014,
+              &.item-2018,
+              &.item-2019,
+              &.item-2005 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 110px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2016,
+              &.item-2017 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 100px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2020 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 70%;
+                        max-height: 125px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .button-prev,
+        .button-next {
+          width: 44px;
+          height: 44px;
+          top: calc(81.5% - 22px);
+
+          .shape-holder {
+            width: 44px;
+            height: 44px;
+            border: 2px solid $oppo;
+          }
+        }
+
+        .button-next {
+          right: -22px;
+
+          .shape-holder {
+            border-bottom: 0;
+            border-left: 0;
+          }
+        }
+
+        .button-prev {
+          left: -22px;
+
+          .shape-holder {
+            border-top: 0;
+            border-right: 0;
+          }
+        }
+
+        .history-pagination {
+          .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            border: 1px solid $oppo;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-screen} {
+    .section-about-history,
+    #about-history {
+      .container {
+        width: calc(100% - 100px);
+
+        .timeline-holder {
+          padding: 40px 0 30px;
+
+          .swiper-wrapper {
+            .history-item {
+              .history-layout-wrapper {
+                grid-template-rows: 230px 60px;
+
+                .context-bg {
+                  height: 210px;
+                  width: 60px;
+                  top: 10px;
+
+                  &.bg-left {
+                    left: calc(2% - 30px);
+                  }
+
+                  &.bg-right {
+                    right: calc(2% - 30px);
+                  }
+                }
+
+                .context-holder {
+                  grid-template-rows: 110px 130px;
+
+                  .history-detail {
+                    font-size: 17.5px;
+                  }
+
+                  .history-icon {
+                    img {
+                      max-height: 110px;
+                      max-width: 42%;
+                    }
+                  }
+
+                  .history-year {
+                    font-size: 17.5px;
+                  }
+                }
+
+                .history-marker {
+                  .marker-line {
+                    top: 30px;
+                  }
+
+                  .marker-holder,
+                  .marker-effect {
+                    width: 16px;
+                    height: 16px;
+                    top: calc(50% - 8px);
+                    left: calc(50% - 8px);
+                  }
+                }
+              }
+
+              // Individual Year
+              &.item-2001,
+              &.item-2006,
+              &.item-2021 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 27%;
+                        max-height: 84px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2012,
+              &.item-2013,
+              &.item-2014,
+              &.item-2018,
+              &.item-2019,
+              &.item-2005 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 95px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2016,
+              &.item-2017 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 85px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2020 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 70%;
+                        max-height: 110px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .button-prev,
+        .button-next {
+          width: 40px;
+          height: 40px;
+          top: calc(81.5% - 20px);
+
+          .shape-holder {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .button-next {
+          right: -20px;
+        }
+
+        .button-prev {
+          left: -20px;
+        }
+
+        .history-pagination {
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            border: 1px solid $oppo;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-laptop} {
+    .section-about-history,
+    #about-history {
+      .container {
+        width: calc(100% - 90px);
+
+        .timeline-holder {
+          padding: 37.5px 0 25px;
+
+          .swiper-wrapper {
+            .history-item {
+              .history-layout-wrapper {
+                grid-template-rows: 200px 50px;
+
+                .context-bg {
+                  height: 180px;
+                  width: 50px;
+                  top: 10px;
+
+                  &.bg-left {
+                    left: calc(2% - 25px);
+                  }
+
+                  &.bg-right {
+                    right: calc(2% - 25px);
+                  }
+                }
+
+                .context-holder {
+                  grid-template-rows: 90px 110px;
+
+                  .history-detail {
+                    font-size: 15.5px;
+                  }
+                }
+
+                .history-marker {
+                  .marker-line {
+                    top: 25px;
+                  }
+
+                  .marker-holder,
+                  .marker-effect {
+                    width: 13px;
+                    height: 13px;
+                    top: calc(50% - 6.5px);
+                    left: calc(50% - 6.5px);
+                  }
+                }
+
+                .history-year {
+                  padding: 3px 0;
+                  font-size: 15.5px;
+                }
+              }
+
+              // Individual Year
+              &.item-2001,
+              &.item-2006,
+              &.item-2021 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 27%;
+                        max-height: 70px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2012,
+              &.item-2013,
+              &.item-2014,
+              &.item-2018,
+              &.item-2019,
+              &.item-2005 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 88px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2016,
+              &.item-2017 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 80px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2020 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 70%;
+                        max-height: 98px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .button-prev,
+        .button-next {
+          width: 36px;
+          height: 36px;
+          top: calc(81.5% - 18px);
+
+          .shape-holder {
+            width: 36px;
+            height: 36px;
+          }
+        }
+
+        .button-next {
+          right: -18px;
+        }
+
+        .button-prev {
+          left: -18px;
+        }
+
+        .history-pagination {
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            border: 1px solid $oppo;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  /* RESPONSIVE */
+  @media #{$information-lg-tablet} {
+    .section-about-history,
+    #about-history {
+      .container {
+        width: calc(100% - 80px);
+        position: relative;
+
+        .timeline-holder {
+          padding: 45px 0 27.5px;
+
+          .swiper-wrapper {
+            .history-item {
+              .history-layout-wrapper {
+                grid-template-rows: 280px 80px;
+
+                .context-bg {
+                  height: 260px;
+                  width: 50px;
+                  top: 10px;
+
+                  &.bg-left {
+                    left: calc(4% - 25px);
+                  }
+
+                  &.bg-right {
+                    right: calc(4% - 25px);
+                  }
+                }
+
+                .context-holder {
+                  grid-template-rows: 120px 160px;
+                  width: 92%;
+
+                  .history-detail {
+                    font-size: 20px;
+                  }
+                }
+
+                .history-marker {
+                  .marker-line {
+                    top: 39px;
+                  }
+
+                  .marker-holder,
+                  .marker-effect {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    top: calc(50% - 10px);
+                    left: calc(50% - 10px);
+                  }
+                }
+
+                .history-year {
+                  padding: 3.5px 0;
+                  font-size: 20px;
+                }
+              }
+
+              // Individual Year
+              &.item-2001,
+              &.item-2006,
+              &.item-2021 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 27%;
+                        max-height: 84px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2012,
+              &.item-2013,
+              &.item-2014,
+              &.item-2018,
+              &.item-2019,
+              &.item-2005 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 95px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2016,
+              &.item-2017 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 85px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2020 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 70%;
+                        max-height: 110px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .button-prev,
+        .button-next {
+          width: 40px;
+          height: 40px;
+          top: calc(81.5% - 20px);
+
+          .shape-holder {
+            width: 40px;
+            height: 40px;
+            border: 2px solid $oppo;
+          }
+        }
+
+        .button-next {
+          right: -20px;
+
+          .shape-holder {
+            border-bottom: 0;
+            border-left: 0;
+          }
+        }
+
+        .button-prev {
+          left: -20px;
+
+          .shape-holder {
+            border-top: 0;
+            border-right: 0;
+          }
+        }
+
+        .history-pagination {
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            border: 1px solid $oppo;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .section-about-history,
+    #about-history {
+      .container {
+        width: calc(100% - 50px);
+
+        .timeline-holder {
+          padding: 35px 0 25px;
+
+          .swiper-wrapper {
+            .history-item {
+              .history-layout-wrapper {
+                grid-template-rows: 200px 40px;
+
+                .context-bg {
+                  height: 180px;
+                  width: 40px;
+                  top: 10px;
+
+                  &.bg-left {
+                    left: calc(4% - 20px);
+                  }
+
+                  &.bg-right {
+                    right: calc(4% - 20px);
+                  }
+                }
+
+                .context-holder {
+                  grid-template-rows: 90px 110px;
+                  width: 92%;
+
+                  .history-detail {
+                    font-size: 15px;
+                  }
+                }
+
+                .history-marker {
+                  .marker-line {
+                    top: 20px;
+                  }
+
+                  .marker-holder,
+                  .marker-effect {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    top: calc(50% - 7px);
+                    left: calc(50% - 7px);
+                  }
+                }
+
+                .history-year {
+                  padding: 2.5px 0;
+                  font-size: 15px;
+                }
+              }
+
+              // Individual Year
+              &.item-2001,
+              &.item-2006,
+              &.item-2021 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 27%;
+                        max-height: 70px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2012,
+              &.item-2013,
+              &.item-2014,
+              &.item-2018,
+              &.item-2019,
+              &.item-2005 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 80px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2016,
+              &.item-2017 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 70px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2020 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 70%;
+                        max-height: 90px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.swiper-slide-active {
+                .history-layout-wrapper {
+                  .context-bg {
+                    z-index: 4;
+                    opacity: 1;
+
+                    transition: all ease-out 420ms 300ms;
+                    -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+                  }
+
+                  .context-holder {
+                    z-index: 5;
+
+                    .history-detail {
+                      transition: all ease-out 420ms 300ms;
+                      -webkit-transform: scale(1.2) translateY(-5%);
+                      transform: scale(1.2) translateY(-5%);
+                    }
+
+                    .history-icon {
+                      transition: all ease-out 420ms 300ms;
+                      -webkit-transform: scale(1.2) translateY(1%);
+                      transform: scale(1.2) translateY(1%);
+                    }
+                  }
+
+                  .history-marker {
+                    .marker-holder,
+                    .marker-effect {
+                      background-color: $oppo;
+                    }
+
+                    .marker-holder {
+                      transition: all ease-out 420ms 300ms;
+                      transform: scale(1.15);
+                    }
+
+                    .marker-effect {
+                      z-index: 0;
+                      animation: wavingEffect2 infinite 2s linear;
+                    }
+                  }
+
+                  .history-year {
+                    color: $oppo;
+                    transform: scale(1.2);
+                    transition: all ease-out 420ms 300ms;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .button-prev,
+        .button-next {
+          width: 30px;
+          height: 30px;
+          top: calc(81% - 15px);
+
+          .shape-holder {
+            width: 30px;
+            height: 30px;
+            border: 2px solid $oppo;
+          }
+        }
+
+        .button-next {
+          right: -15px;
+
+          .shape-holder {
+            border-bottom: 0;
+            border-left: 0;
+          }
+        }
+
+        .button-prev {
+          left: -15px;
+
+          .shape-holder {
+            border-top: 0;
+            border-right: 0;
+          }
+        }
+
+        .history-pagination {
+          .swiper-pagination-bullet {
+            width: 9px;
+            height: 9px;
+            border: 1px solid $oppo;
+            border-radius: 5px;
+            margin: 0 3px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-phone} {
+    .section-about-history,
+    #about-history {
+      .container {
+        width: calc(100% - 30px);
+
+        .timeline-holder {
+          padding: 35px 0 25px;
+
+          .swiper-wrapper {
+            .history-item {
+              .history-layout-wrapper {
+                grid-template-rows: 180px 40px;
+
+                .context-bg {
+                  height: 180px;
+                  width: 30px;
+                  top: 10px;
+
+                  &.bg-left {
+                    left: calc(4% - 15px);
+                  }
+
+                  &.bg-right {
+                    right: calc(4% - 15px);
+                  }
+                }
+
+                .context-holder {
+                  grid-template-rows: 80px 100px;
+                  width: 92%;
+
+                  .history-detail {
+                    font-size: 14px;
+                  }
+                }
+
+                .history-marker {
+                  .marker-line {
+                    top: 20px;
+                  }
+
+                  .marker-holder,
+                  .marker-effect {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    top: calc(50% - 6px);
+                    left: calc(50% - 6px);
+                  }
+                }
+
+                .history-year {
+                  padding: 2.5px 0;
+                  font-size: 14px;
+                }
+              }
+
+              // Individual Year
+              &.item-2001,
+              &.item-2006,
+              &.item-2021 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 27%;
+                        max-height: 60px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2012,
+              &.item-2013,
+              &.item-2014,
+              &.item-2018,
+              &.item-2019,
+              &.item-2005 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 74px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2016,
+              &.item-2017 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 50%;
+                        max-height: 62px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.item-2020 {
+                .history-layout-wrapper {
+                  .context-holder {
+                    .history-icon {
+                      img {
+                        max-width: 70%;
+                        max-height: 80px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .button-prev,
+        .button-next {
+          width: 26px;
+          height: 26px;
+          top: calc(79.5% - 13px);
+
+          .shape-holder {
+            width: 26px;
+            height: 26px;
+            border: 2px solid $oppo;
+          }
+        }
+
+        .button-next {
+          right: -3px;
+
+          .shape-holder {
+            border-bottom: 0;
+            border-left: 0;
+          }
+        }
+
+        .button-prev {
+          left: -3px;
+
+          .shape-holder {
+            border-top: 0;
+            border-right: 0;
+          }
+        }
+
+        .history-pagination {
+          .swiper-pagination-bullet {
+            width: 9px;
+            height: 9px;
+            border: 1px solid $oppo;
+            border-radius: 5px;
+            margin: 0 2px;
+          }
+        }
+      }
+    }
+  }
+}

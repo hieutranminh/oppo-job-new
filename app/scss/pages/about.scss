@@ -1,0 +1,80 @@
+@import "about/banner";
+@import "about/intro";
+@import "about/spirit";
+@import "about/culture";
+@import "about/culture-2";
+@import "about/history";
+@import "about/archivement";
+
+// Support Animations
+@-webkit-keyframes wavingEffect {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.35);
+  }
+
+  99% {
+    opacity: 0;
+    transform: scale(1.75);
+  }
+}
+
+@keyframes wavingEffect {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.35);
+  }
+
+  99% {
+    opacity: 0;
+    transform: scale(1.75);
+  }
+}
+
+@keyframes wavingEffect2 {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.55);
+  }
+
+  99% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes wavingEffect2 {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.55);
+  }
+
+  99% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}

@@ -1,0 +1,448 @@
+#hr-about-page {
+  .section-about-culture-style-2,
+  #about-culture-2 {
+    height: 800px;
+    background-color: $white;
+    z-index: 5;
+
+
+    .main-content {
+      width: 100%;
+      height: 100%;
+    }
+
+    .culture-mb-slider {
+      display: none;
+    }
+
+    .container {
+      height: 100%;
+      width: 1200px;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+
+      .culture-layout {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 640px;
+        max-height: 80vw;
+
+        .images-holder,
+        .intros-holder {
+          height: 100%;
+          flex-shrink: 0;
+          position: relative;
+        }
+
+        .intros-holder {
+          width: 55.666%;
+          flex-basis: 55.666%;
+          padding-left: 75px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-bottom: 105px;
+
+          .intro-item {
+            border-bottom: 1px solid #ccc;
+            transform: translateY(78px);
+            padding: 30px 0 25px;
+            cursor: pointer;
+            position: relative;
+            transition: all cubic-bezier(0, 0.25, 0.59, 0.99) 500ms;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .intro-title {
+              font-weight: 600;
+              opacity: 0.333;
+              transition: all ease-in 100ms;
+
+              &:hover {
+                transition: all ease-out 150ms;
+                opacity: 0.75;
+              }
+            }
+
+            .intro-desc {
+              font-size: 18px;
+              padding-right: 5%;
+              line-height: 26px;
+              // height: 78px;
+              position: absolute;
+              left: 0;
+              bottom: 25px;
+
+              // Original state
+              opacity: 0;
+              visibility: hidden;
+
+              li {
+                text-indent: 12px;
+                position: relative;
+
+                &:before {
+                  content: "";
+                  width: 6px;
+                  height: 6px;
+                  font-size: 1px;
+                  background-color: $oppo;
+                  top: 8px;
+                  left: 0;
+                  position: absolute;
+                  border-radius: 6px;
+                }
+              }
+            }
+
+            &.active {
+              cursor: initial;
+              padding-bottom: 85px;
+              transition: all cubic-bezier(0, 0.25, 0.59, 0.99) 500ms;
+
+              &.mission-intro {
+                padding-bottom: 190px;
+              }
+
+              &.value-intro {
+                padding-bottom: 140px;
+              }
+
+              .intro-title {
+                opacity: 1;
+              }
+
+              .intro-desc {
+                opacity: 1;
+                visibility: visible;
+                transition: all ease-out 330ms 220ms;
+              }
+            }
+          }
+        }
+
+        .images-holder {
+          width: 44.444%;
+          background-color: #999;
+          flex-basis: 44.444%;
+
+          .img-block {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+            // original state
+            opacity: 0;
+            visibility: hidden;
+            transition: all ease-in 200ms;
+
+            .img-holder {
+              position: absolute;
+              overflow: hidden;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+
+            &.active {
+              opacity: 1;
+              visibility: visible;
+              transition: all ease-out 300ms 50ms;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-tablet} {
+    .section-about-culture-style-2,
+    #about-culture-2 {
+      height: 130vw;
+      min-height: unset!important;
+      min-width: unset!important;
+
+      .container {
+        .culture-layout {
+          display: none;
+        }
+      }
+
+      .culture-mb-slider {
+        display: block;
+        width: 120%;
+        height: 90%;
+        margin-left: -10%;
+        position: relative;
+        padding-top: 70px;
+        min-height: unset!important;
+        min-width: unset!important;
+
+        .culture-button-next,
+        .culture-button-prev {
+          position: absolute;
+          top: -25px;
+          font-size: 54px;
+          opacity: 0.35;
+
+          &:hover,
+          &:active {
+            opacity: 0.5;
+            transition: all ease-out 150ms;
+          }
+        }
+
+        .culture-button-next {
+          left: calc(50% + 60px);
+          animation: arrowMove 1s 0.5s linear infinite;
+        }
+
+        .culture-button-prev {
+          right: calc(50% + 60px);
+          animation: arrowMove 1s linear infinite;
+        }
+
+        .culture-slider {
+          .swiper-slide {
+            .culture-item {
+              position: relative;
+              padding-bottom: 100px;
+
+              .culture-img {
+                height: 77vw;
+                width: 100%;
+
+                .img-holder {
+                  width: 100%;
+                  height: 100%;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                }
+              }
+
+              .culture-desc {
+                position: absolute;
+                top: 77vw;
+                left: 0;
+                right: 0;
+                padding-top: 20px;
+
+                // original state
+                opacity: 0;
+
+                .intro-title {
+                  font-weight: 600;
+                  font-size: 22px;
+                  margin-bottom: 8px;
+                }
+
+                .intro-desc {
+                  font-size: 17px;
+                  padding: 0 5%;
+                }
+              }
+            }
+
+            &.swiper-slide-prev {
+              opacity: 0;
+              transition: all ease-out 250ms;
+
+              .culture-item {
+                .culture-desc {
+                  opacity: 0;
+                  -webkit-transform: translateX(-50px);
+                  transform: translateX(-50px);
+                  transition: all ease-in 200ms;
+                }
+              }
+            }
+
+            &.swiper-slide-next {
+              .culture-item {
+                .culture-desc {
+                  opacity: 0;
+                  -webkit-transform: translateX(50px);
+                  transform: translateX(50px);
+                  transition: all ease-in 200ms;
+                }
+              }
+            }
+
+            &.swiper-slide-active {
+              .culture-item {
+                .culture-desc {
+                  opacity: 1;
+                  -webkit-transform: translateX(0);
+                  transform: translateX(0);
+                  transition: all cubic-bezier(0.12, 0.76, 0.52, 1) 500ms 250ms;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .section-about-culture-style-2,
+    #about-culture-2 {
+      height: 150vw;
+
+      .culture-mb-slider {
+        width: 150%;
+        height: 96%;
+        margin-left: -25%;
+        padding-top: 55px;
+
+        .culture-button-next,
+        .culture-button-prev {
+          top: -16px;
+          font-size: 36px;
+        }
+
+        .culture-button-next {
+          left: calc(50% + 30px);
+        }
+
+        .culture-button-prev {
+          right: calc(50% + 30px);
+        }
+
+        .culture-slider {
+          .swiper-slide {
+            .culture-item {
+              padding-bottom: 90px;
+
+              .culture-img {
+                height: 85vw;
+              }
+
+              .culture-desc {
+                top: 85vw;
+                padding-top: 13px;
+
+                .intro-title {
+                  font-size: 16px;
+                  margin-bottom: 5px;
+                }
+
+                .intro-desc {
+                  font-size: 13px;
+                  padding: 0 4%;
+                }
+              }
+            }
+
+            &.swiper-slide-prev {
+              .culture-item {
+                .culture-desc {
+                  -webkit-transform: translateX(-35px);
+                  transform: translateX(-35px);
+                }
+              }
+            }
+
+            &.swiper-slide-next {
+              .culture-item {
+                .culture-desc {
+                  -webkit-transform: translateX(35px);
+                  transform: translateX(35px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-phone} {
+    .section-about-culture-style-2,
+    #about-culture-2 {
+      height: 164vw;
+
+      .culture-mb-slider {
+        width: 170%;
+        height: 97%;
+        margin-left: -35%;
+        padding-top: 40px;
+
+        .culture-button-next,
+        .culture-button-prev {
+          top: -16px;
+          font-size: 36px;
+        }
+
+        .culture-button-next {
+          left: calc(50% + 25px);
+        }
+
+        .culture-button-prev {
+          right: calc(50% + 25px);
+        }
+
+        .culture-slider {
+          .swiper-slide {
+            .culture-item {
+              padding-bottom: 90px;
+
+              .culture-img {
+                height: 92vw;
+              }
+
+              .culture-desc {
+                top: 92vw;
+                padding-top: 13px;
+
+                .intro-title {
+                  font-size: 16px;
+                  margin-bottom: 5px;
+                }
+
+                .intro-desc {
+                  font-size: 13px;
+                  padding: 0 4%;
+                }
+              }
+            }
+
+            &.swiper-slide-prev {
+              .culture-item {
+                .culture-desc {
+                  transform: translateX(-30px);
+                }
+              }
+            }
+
+            &.swiper-slide-next {
+              .culture-item {
+                .culture-desc {
+                  transform: translateX(30px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+#hr-home-page {
+  /* OPPO Global */
+  .section-oppo-global,
+  #home-oppo-global {
+    position: relative;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    height: 54vw;
+
+    .oppo-archivements {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 10px;
+      grid-template-rows: 135px;
+      padding: 0 5px;
+
+      .archive-item {
+        background-color: $oppo;
+        border-radius: 20px;
+        box-shadow: 0 0 8px rgba(#000, 0.5);
+        font-size: 22.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .context {
+          color: $white;
+        }
+      }
+    }
+
+    .globe-holder {
+      position: absolute;
+      top: 52%;
+      left: 0;
+      right: 0;
+
+      canvas {
+        width: 94%;
+        height: auto;
+        display: block;
+        margin: auto;
+        opacity: 0.25;
+      }
+    }
+
+    .video-holder {
+      width: 100%;
+      height: 54vw;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  /* OPPO Global - END */
+
+  @media #{$information-md-screen} {
+    .section-oppo-global,
+    #home-oppo-global {
+      height: 56vw;
+
+      .oppo-archivements {
+        grid-template-rows: 115px;
+        padding: 0 5px;
+
+        .archive-item {
+          font-size: 20px;
+        }
+      }
+
+      .video-holder {
+        height: 56vw;
+      }
+    }
+  }
+
+  @media #{$information-sm-screen} {
+    .section-oppo-global,
+    #home-oppo-global {
+      height: 57vw;
+
+      .oppo-archivements {
+        grid-template-rows: 100px;
+        padding: 0 3.5px;
+
+        .archive-item {
+          font-size: 17.5px;
+          border-radius: 15px;
+        }
+      }
+
+      .video-holder {
+        height: 57vw;
+      }
+    }
+  }
+
+  @media #{$information-tablet} {
+    .section-oppo-global,
+    #home-oppo-global {
+      height: 178vw;
+
+      .oppo-archivements {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+        grid-template-rows: 15vw 15vw 15vw;
+        padding: 0 5px;
+        padding: 0 15px;
+
+        .archive-item {
+          border-radius: 15px;
+          box-shadow: 0 0 5px rgba(#000, 0.25);
+          font-size: 17.5px;
+        }
+      }
+
+      .globe-holder {
+        top: 52%;
+        left: -45%;
+        right: -45%;
+
+        canvas {
+          width: 100%;
+        }
+      }
+
+      .video-holder {
+        height: 178vw;
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .section-oppo-global,
+    #home-oppo-global {
+      // height: 175vw;
+
+      .oppo-archivements {
+        grid-template-rows: 17.5vw 17.5vw 17.5vw;
+        padding: 0;
+
+        .archive-item {
+          border-radius: 12px;
+          box-shadow: 0 0 5px rgba(#000, 0.25);
+          font-size: 14px;
+        }
+      }
+
+      .globe-holder {
+        top: 58%;
+        left: -45%;
+        right: -45%;
+
+        canvas {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-phone} {
+    .section-oppo-global,
+    #home-oppo-global {
+      // height: 180vw;
+
+      .oppo-archivements {
+        grid-template-rows: 17.5vw 17.5vw 17.5vw;
+        padding: 0;
+
+        .archive-item {
+          border-radius: 7px;
+          box-shadow: 0 0 5px rgba(#000, 0.25);
+          font-size: 12.5px;
+        }
+      }
+
+      .globe-holder {
+        top: 60%;
+        left: -45%;
+        right: -45%;
+
+        canvas {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

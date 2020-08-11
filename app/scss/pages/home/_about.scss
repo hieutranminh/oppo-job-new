@@ -1,0 +1,204 @@
+#hr-home-page {
+  /* About */
+  .section-about-oppo,
+  #home-about-oppo {
+    position: relative;
+    height: 66vw;
+    overflow: hidden;
+
+    .main-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 2;
+      padding-bottom: 7vw;
+      background-image: linear-gradient(#ffffffff, #ffffffff 70%, #ffffff00);
+
+      .title {
+        margin: 95px 0 45px;
+      }
+
+      .cta-holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+
+        .arrow {
+          height: 25px;
+          margin-left: 6.5px;
+          -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+          @include flex;
+
+          img {
+            max-height: 100%;
+          }
+        }
+      }
+    }
+
+    .people-img-holder {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      .img-holder {
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    .grad-overlay {
+      z-index: 2;
+    }
+  }
+  /* About - END */
+
+  @media #{$information-md-screen} {
+    .section-about-oppo,
+    #home-about-oppo {
+      .main-content {
+        .title {
+          margin: 83.125px 0 39.375px;
+        }
+
+        .cta-holder {
+          .arrow {
+            height: 20px;
+            margin-left: 5.6875px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-screen} {
+    .section-about-oppo,
+    #home-about-oppo {
+      .main-content {
+        .title {
+          margin: 67px 0 32px;
+        }
+
+        .cta-holder {
+          .arrow {
+            height: 17.5px;
+            margin-left: 4.63125px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-laptop} {
+    .section-about-oppo,
+    #home-about-oppo {
+      height: 80vw;
+
+      .main-content {
+        .title {
+          margin: 63.33px 0 30px;
+        }
+
+        .cta-holder {
+          .arrow {
+            height: 13.5px;
+            margin-left: 4.3px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-tablet} {
+    .section-about-oppo,
+    #home-about-oppo {
+      height: 110vw;
+
+      .main-content {
+        padding-bottom: 26vw;
+        .title {
+          margin: 10vw 0 2vw;
+        }
+
+        .desc {
+          margin-bottom: 3vw;
+        }
+
+        .cta-holder {
+          .arrow {
+            height: 20.5px;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .people-img-holder {
+        left: -2%;
+        right: -4%;
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .section-about-oppo,
+    #home-about-oppo {
+       height: 130vw;
+
+      .main-content {
+        padding-bottom: 36vw;
+        .title {
+          margin: 12vw 0 6.5vw;
+        }
+
+        .desc {
+          margin-bottom: 7vw;
+        }
+
+        .cta-holder {
+          .arrow {
+            height: 11.5px;
+            margin-left: 5px;
+          }
+        }
+      }
+      .people-img-holder {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  @media #{$information-sm-phone} {
+    .section-about-oppo,
+    #home-about-oppo {
+      // height: 140vw;
+
+      .main-content {
+        .title {
+          margin: 11.5vw 0 5vw;
+        }
+
+        .desc {
+          margin-bottom: 6vw;
+        }
+
+        .cta-holder {
+          .arrow {
+            height: 11px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

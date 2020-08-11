@@ -1,0 +1,19 @@
+// 3rd Party Vendor Stylesheet
+//@import "vendors/fontawesome/font-awesome";
+
+// Website Core Stylesheet Guideline
+@import "common/variables";
+@import "common/elements";
+@import "common/helpers";
+@import "common/typography";
+
+// Website Common Components
+@import "components/core";
+@import "components/ui";
+@import "components/footer";
+@import "components/header";
+
+// Pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/job";
