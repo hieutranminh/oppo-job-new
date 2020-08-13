@@ -56,6 +56,9 @@
 @media #{$information-sm-laptop} {
   .style-override {
     .section-search-bar {
+      .wrapper {
+        width: 992px;
+      }
       .search-form {
         @include flex;
         width: 860px;
@@ -83,6 +86,9 @@
 @media #{$information-tablet-pro} {
   .style-override {
     .section-search-bar {
+      .wrapper {
+        width: 90%;
+      }
       .search-form {
         width: 100%;
       }
