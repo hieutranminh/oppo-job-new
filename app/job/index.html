@@ -36,7 +36,7 @@
   <meta property="og:description" content="" />
   <meta property="fb:app_id" content="" />
   <!-- META DATA - END -->
-
+  <link href="../css/common/hr_v2.css" rel="stylesheet" />
   <link href="../css/common/common-header_v2.css" rel="stylesheet" />
   <link href="../css/common/new_styles_v2.css" rel="stylesheet" />
 
@@ -54,7 +54,6 @@
   <!-- TRACKING CODE - END -->
 </head>
 <body class="home-page page basicpage light-theme" cz-shortcut-listen="true">
-<div id="oc-wrapper" style="margin-top: -2px;">
   <!-- Header -->
   <header id="oc-header" class="oc-header oh-theme-black">
         <span style="display: none;">
@@ -264,106 +263,481 @@
   </header>
 
   <!-- === MAIN CONTENT === -->
-  <div class="page-wrapper" id="hr-job-page">
+  <div id="oc-wrapper" class="">
+    <!-- Main Content -->
+    <div class="main-content">
 
-    <!--Form search-->
-    <section class="job-search">
-        <form action="#">
-          <div class="job-search-layout">
-            <div class="form-block">
-              <input type="text" placeholder="Từ khóa..." class="custom-input" />
+      <!-- Search bar -->
+      <div class="section section-search-bar">
+        <div class="wrapper">
+          <h2 class="title">Tìm kiếm</h2>
+          <form method="GET" action="https://vieclam.oppomobile.vn/index/job">
+            <div class="search-form">
+
+              <div class="form-item">
+                <input type="text" name="name" placeholder="Từ khóa" id="" value="">
+              </div>
+              <div class="form-item">
+
+                <select name="category" id="category">
+                  <option value="">-- Ngành nghề --</option>
+                  <option value="1">Nhân sự </option>
+                  <option value="2">Kế toán- Tài chính </option>
+                  <option value="3">Marketing </option>
+                  <option value="4">Training </option>
+                  <option value="5">Kinh doanh </option>
+                  <option value="6">Công nghệ thông tin </option>
+                  <option value="7">Kho vận </option>
+                  <option value="8">Chăm sóc khách hàng </option>
+                  <option value="9">Kỹ thuật điện thoại </option>
+                  <option value="15">Mua hàng </option>
+                  <option value="43">Thực tập </option>
+                  <option value="45">Thiết kế </option>
+
+                </select>
+              </div>
+              <div class="form-item">
+                <select name="location">
+                  <option value="">-- Tỉnh/ Thành phố --</option>
+                  <option value="89">An Giang </option>
+                  <option value="77">Bà Rịa - Vũng Tàu </option>
+                  <option value="24">Bắc Giang </option>
+                  <option value="6">Bắc Kạn </option>
+                  <option value="95">Bạc Liêu </option>
+                  <option value="27">Bắc Ninh </option>
+                  <option value="83">Bến Tre </option>
+                  <option value="74">Bình Dương </option>
+                  <option value="52">Bình Định </option>
+                  <option value="70">Bình Phước </option>
+                  <option value="60">Bình Thuận </option>
+                  <option value="96">Cà Mau </option>
+                  <option value="92">Cần Thơ </option>
+                  <option value="4">Cao Bằng </option>
+                  <option value="67">Đăk Nông </option>
+                  <option value="66">Đắk Lắk </option>
+                  <option value="11">Điện Biên </option>
+                  <option value="75">Đồng Nai </option>
+                  <option value="87">Đồng Tháp </option>
+                  <option value="64">Gia Lai </option>
+                  <option value="2">Hà Giang </option>
+                  <option value="35">Hà Nam </option>
+                  <option value="42">Hà Tĩnh </option>
+                  <option value="30">Hải Dương </option>
+                  <option value="93">Hậu Giang </option>
+                  <option value="17">Hòa Bình </option>
+                  <option value="33">Hưng Yên </option>
+                  <option value="56">Khánh Hòa </option>
+                  <option value="91">Kiên Giang </option>
+                  <option value="62">Kon Tum </option>
+                  <option value="12">Lai Châu </option>
+                  <option value="68">Lâm Đồng </option>
+                  <option value="20">Lạng Sơn </option>
+                  <option value="10">Lào Cai </option>
+                  <option value="80">Long An </option>
+                  <option value="36">Nam Định </option>
+                  <option value="40">Nghệ An </option>
+                  <option value="37">Ninh Bình </option>
+                  <option value="58">Ninh Thuận </option>
+                  <option value="25">Phú Thọ </option>
+                  <option value="54">Phú Yên </option>
+                  <option value="44">Quảng Bình </option>
+                  <option value="49">Quảng Nam </option>
+                  <option value="51">Quảng Ngãi </option>
+                  <option value="22">Quảng Ninh </option>
+                  <option value="45">Quảng Trị </option>
+                  <option value="94">Sóc Trăng </option>
+                  <option value="14">Sơn La </option>
+                  <option value="72">Tây Ninh </option>
+                  <option value="34">Thái Bình </option>
+                  <option value="19">Thái Nguyên </option>
+                  <option value="38">Thanh Hóa </option>
+                  <option value="46">Thừa Thiên - Huế </option>
+                  <option value="82">Tiền Giang </option>
+                  <option value="48">Đà Nẵng </option>
+                  <option value="1">Hà Nội </option>
+                  <option value="31">Hải Phòng </option>
+                  <option value="79">Hồ Chí Minh </option>
+                  <option value="84">Trà Vinh </option>
+                  <option value="8">Tuyên Quang </option>
+                  <option value="86">Vĩnh Long </option>
+                  <option value="26">Vĩnh Phúc </option>
+                  <option value="15">Yên Bái </option>
+                </select>
+
+              </div>
+              <div class="form-item">
+                <button type="submit"><span class="icon1 icon-search"></span><span class="sm-show"> Tìm kiếm</span></button>
+              </div>
             </div>
-            <div class="form-block">
-              <select name="" class="custom-input">
-                <option value="" selected>-- Ngành nghề --</option>
-              </select>
-            </div>
-            <div class="form-block">
-              <select name="" class="custom-input">
-                <option value="" selected>-- Tỉnh / Thành phố --</option>
-              </select>
-            </div>
-            <button type="submit" class="submit-form">
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </form>
-      </section>
-
-    <!--Table list-->
-    <section class="job-table">
-      <div class="wrapper">
-        <!--title-->
-        <h2>Tìm kiếm từ khóa : 3 kết quả</h2>
-
-        <!--table-->
-        <div class="job-table-list">
-          <table>
-            <!--head-->
-            <tr>
-              <th>Vị trí</th>
-              <th>Khu vực</th>
-              <th>Hạn nộp hồ sơ</th>
-            </tr>
-
-            <!--body-->
-            <tr>
-              <td>
-                <a href="#">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Đà Lạt</a>
-              </td>
-              <td>Lâm Đồng</td>
-              <td>
-                <div class="deadline">
-                  <p>30/08/2020</p>
-                  <a href="#" class="btn-join">Ứng tuyển</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Hà Nội (Hợp đồng 6 tháng)</a>
-              </td>
-              <td>Hà Nội</td>
-              <td>
-                <div class="deadline">
-                  <p>30/08/2020</p>
-                  <a href="#" class="btn-join">Ứng tuyển</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Bình Dương</a>
-              </td>
-              <td>Bình Dương</td>
-              <td>
-                <div class="deadline">
-                  <p>30/08/2020</p>
-                  <a href="#" class="btn-join">Ứng tuyển</a>
-                </div>
-              </td>
-            </tr>
-          </table>
+          </form>
         </div>
 
-        <!--Link-->
-        <div class="job-link">
-          <div class="icon">
-            <img src="../img/home/bulb-ico.png" alt="" />
+      </div>
+      <!-- End of Search bar -->
+
+
+
+      <div class="section section-job-list">
+        <div class="wrapper">
+          <h2 class="title center">Tìm kiếm từ khóa '<b style="color:red"></b>' : 20 kết quả</h2>
+          <b style="color:red"> </b>
+          <div class="job-list">
+            <div class="job-list-head sm-hide">
+              <div class="row">
+                <div class="job-title">
+                  <p>Vị trí</p>
+                </div>
+                <div class="job-area">
+                  <p>Khu vực </p>
+                </div>
+                <div class="job-date">
+                  <p>Hạn nộp hồ sơ</p>
+                </div>
+              </div>
+            </div>
+            <div class="job-list-body">
+
+
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=733">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Hồ Chí Minh</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hồ Chí Minh</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=733" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=795">Chuyên viên tư vấn OPPO Brandshop - Vincom Bà Triệu</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hà Nội</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=795" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=703">Nhân Viên Kinh Doanh - Hà Nội (Hà Tây Cũ)</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hà Nội</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=703" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=462">Nhân Viên Bán Hàng - Tại Các Huyện Ngoại Thành (Hà Tây Cũ) - Gấp</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hà Nội</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=462" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=793">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Đà Lạt</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Lâm Đồng</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">30/08/2020</p>
+                    <a href="/index/detail?id=793" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=790">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Hà Nội (Hợp đồng 6 tháng)</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hà Nội</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=790" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=535">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Hà Nội</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hà Nội</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=535" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=780">Digital Marketing Specialist - Hồ Chí Minh</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hồ Chí Minh</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">15/08/2020</p>
+                    <a href="/index/detail?id=780" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=791">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Bình Dương</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Bình Dương</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=791" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=292">Nhân Viên Tư Vấn Bán Hàng - HCM2 - Quận 1, Quận 3, Quận 10, Tân Bình, Phú Nhuận</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hồ Chí Minh</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">30/08/2020</p>
+                    <a href="/index/detail?id=292" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=176">Tuyển dụng Nhân Viên Tư Vấn Bán Hàng - QUẬN 4- QUẬN 5 - QUẬN 7- NHÀ BÈ-  HCM</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hồ Chí Minh</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">15/08/2020</p>
+                    <a href="/index/detail?id=176" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=789">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Bình Dương</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Bình Dương</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=789" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=695">Chuyên viên tư vấn OPPO Brandshop - Quận 7</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hồ Chí Minh</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">15/08/2020</p>
+                    <a href="/index/detail?id=695" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=769">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Đồng Tháp</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Đồng Tháp</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=769" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=786">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Cần Thơ</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Cần Thơ</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=786" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=293">Nhân Viên Bán Hàng -  HCM3 (Q2, Q9, Thủ Đức, Bình Thạnh)</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hồ Chí Minh</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=293" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=772">Nhân Viên Kinh Doanh - Hải Dương</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hải Dương</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">30/08/2020</p>
+                    <a href="/index/detail?id=772" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="job-card job-details">
+                <div class="row">
+                  <div class="basic">
+                    <div class="job-title">
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=138">Nhân Viên Kinh Doanh - HCM3 (Q2, Q9, Thủ Đức, Bình Thạnh)</a>
+                    </div>
+                    <div class="job-area">
+                      <p>Hồ Chí Minh</p>
+                    </div>
+                  </div>
+                  <div class="job-date">
+                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
+                    <a href="/index/detail?id=138" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div class="content">
-            <h5>CÙNG CHÚNG TÔI THỰC HIỆN <span>ĐAM MÊ </span>CỦA BẠN</h5>
-            <p>
-              Nếu hiện tại chưa có vị trí phù hợp, đừng ngần ngại ứng tuyển
-              <a href="#">
-                Tại đây
-                <img src="../img/arrow.png" alt="">
-              </a>
+          <div class="notification">
+            <p class="center">
+              Nếu hiện tại chưa có vị trí nào phù hợp, bạn vui lòng nộp hồ sơ
+              <a class="apply-btn" href="https://vieclam.oppomobile.vn/index/detail-new" target="_blank">Tại đây</a>,
+              OPPO sẽ liên hệ bạn khi có vị trí phù hợp.
             </p>
           </div>
         </div>
       </div>
-    </section>
+      <div class="section section1">
+      </div>
+    </div>
+    <!-- Main Content -->
   </div>
   <!-- ====== MAIN CONTENT - END ====== -->
 
@@ -470,7 +844,6 @@
       </div>
     </div>
   </div>
-</div>
 
 <!-- === REUSABLE === -->
 <div class="video-modal">
