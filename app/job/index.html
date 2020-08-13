@@ -53,6 +53,308 @@
 
   <!-- TRACKING CODE - END -->
 </head>
+<style>
+  /*----This Copy CSS 13092020----*/
+  .style-override .section-search-bar {
+    background: transparent;
+    padding: 0; }
+  .style-override .section-search-bar .search-form {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 920px;
+    margin: auto;
+    padding: 20px 0; }
+  .style-override .section-search-bar .search-form .form-item {
+    width: 210px;
+    margin-right: 20px; }
+  .style-override .section-search-bar .search-form .form-item .custom-input {
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    font-size: 20px;
+    padding: 3px 15px 0; }
+  .style-override .section-search-bar .search-form .form-item.submit-form {
+    margin-right: 0;
+    width: 60px; }
+  .style-override .section-search-bar .search-form .form-item.submit-form button {
+    width: 100%;
+    height: 48px;
+    font-size: 22px;
+    background-color: #046a38;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .style-override .section-search-bar .search-form .form-item.submit-form button i {
+    color: #ffffff; }
+
+  @media only screen and (max-width: 1280px) {
+    .style-override .section-search-bar .search-form {
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      width: 860px; }
+    .style-override .section-search-bar .search-form .form-item {
+      width: 180px;
+      margin-right: 18px; }
+    .style-override .section-search-bar .search-form .form-item .custom-input {
+      height: 42px;
+      line-height: 42px;
+      font-size: 18px; }
+    .style-override .section-search-bar .search-form .form-item.submit-form {
+      width: 54px; }
+    .style-override .section-search-bar .search-form .form-item.submit-form button {
+      height: 42px;
+      font-size: 22px; } }
+
+  @media only screen and (max-width: 992px) {
+    .style-override .section-search-bar .search-form {
+      width: 100%; } }
+
+  @media only screen and (max-width: 768px) {
+    .style-override .section-search-bar .search-form {
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 20px; }
+    .style-override .section-search-bar .search-form .form-item {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px; }
+    .style-override .section-search-bar .search-form .form-item .custom-input {
+      height: 50px;
+      line-height: 50px;
+      font-size: 22px; }
+    .style-override .section-search-bar .search-form .form-item.submit-form {
+      width: 100%; }
+    .style-override .section-search-bar .search-form .form-item.submit-form button {
+      height: 50px; } }
+
+  @media only screen and (max-width: 480px) {
+    .style-override .section-search-bar .wrapper {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+    .style-override .section-search-bar .wrapper .search-form {
+      padding: 30px; }
+    .style-override .section-search-bar .wrapper .search-form .form-item {
+      margin-top: 0;
+      margin-bottom: 20px; }
+    .style-override .section-search-bar .wrapper .search-form .form-item .custom-input {
+      height: 42px;
+      line-height: 42px;
+      font-size: 18px; }
+    .style-override .section-search-bar .wrapper .search-form .form-item.submit-form button {
+      height: 42px; } }
+
+  .style-override {
+    background-image: linear-gradient(#ffffff, #f0f0f0);
+    background-image: -webkit-linear-gradient(#ffffff, #f0f0f0);
+    background-image: -moz-linear-gradient(#ffffff, #f0f0f0);
+    margin-top: -2px;
+    padding: 100px 0 40px !important; }
+  .style-override .section-job-list .wrapper h2.title {
+    margin-top: 0; }
+  .style-override .section-job-list .wrapper .job-list {
+    border: none; }
+  .style-override .section-job-list .wrapper .job-list .job-title p {
+    font-size: unset; }
+  .style-override .section-job-list .wrapper .job-list .job-area p {
+    font-size: unset; }
+  .style-override .section-job-list .wrapper .job-list .job-date p {
+    font-size: unset; }
+  .style-override .section-job-list .wrapper .job-list .job-card {
+    border: none; }
+  .style-override .section-job-list .wrapper .job-list .job-card:nth-child(odd) {
+    background: #eeeeee; }
+  .style-override .section-job-list .wrapper .job-list .job-card .job-title a {
+    font-size: unset; }
+  .style-override .section-job-list .wrapper .job-list .job-card .job-area {
+    border: none; }
+  .style-override .section-job-list .wrapper .job-list .job-card .job-area p {
+    font-size: unset; }
+  .style-override .section-job-list .wrapper .job-list .job-card .job-date p {
+    font-size: unset;
+    font-weight: 400; }
+
+  @media only screen and (max-width: 1280px) {
+    .style-override .section-job-list .wrapper {
+      width: 992px; }
+    .style-override .section-job-list .wrapper h2.title {
+      margin-top: 0; }
+    .style-override .section-job-list .wrapper .job-list {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-title p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-area p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-date p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-card {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-card:nth-child(odd) {
+      background: #eeeeee; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-title a {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-area {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-area p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-date p {
+      font-size: unset;
+      font-weight: 400; } }
+
+  @media only screen and (max-width: 1024px) {
+    .style-override .section-job-list .wrapper {
+      width: 90%; }
+    .style-override .section-job-list .wrapper h2.title {
+      margin-top: 0; }
+    .style-override .section-job-list .wrapper .job-list {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-title p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-area p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-date {
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 0; }
+    .style-override .section-job-list .wrapper .job-list .job-date p {
+      font-size: unset;
+      margin: 0 0 10px !important; }
+    .style-override .section-job-list .wrapper .job-list .job-date a {
+      margin: 0 !important; }
+    .style-override .section-job-list .wrapper .job-list .job-card {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-card:nth-child(odd) {
+      background: #eeeeee; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-title a {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-area {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-area p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-date p {
+      font-size: unset;
+      font-weight: 400; } }
+
+  @media only screen and (max-width: 480px) {
+    .style-override .section-job-list .wrapper {
+      width: 90%; }
+    .style-override .section-job-list .wrapper h2.title {
+      margin-top: 0; }
+    .style-override .section-job-list .wrapper .job-list {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-title p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-area p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-date {
+      margin-top: 20px; }
+    .style-override .section-job-list .wrapper .job-list .job-date p {
+      font-size: unset;
+      margin: 0 0 10px !important; }
+    .style-override .section-job-list .wrapper .job-list .job-date a {
+      margin: 0 !important;
+      width: 100%;
+      text-align: center; }
+    .style-override .section-job-list .wrapper .job-list .job-card {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-card:nth-child(odd) {
+      background: #eeeeee; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-title a {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-area {
+      border: none; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-area p {
+      font-size: unset; }
+    .style-override .section-job-list .wrapper .job-list .job-card .job-date p {
+      font-size: unset;
+      font-weight: 400; } }
+
+  .job-link {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 0; }
+  .job-link .icon {
+    width: 36px; }
+  .job-link .content {
+    padding-top: 15px;
+    margin-left: 8px; }
+  .job-link .content h5 {
+    font-size: 24px;
+    font-weight: 400; }
+  .job-link .content h5 span {
+    color: #046a38; }
+  .job-link .content p {
+    font-size: 16px;
+    font-weight: 300; }
+  .job-link .content p a {
+    color: #046a38;
+    font-size: 19px;
+    font-weight: 400; }
+  .job-link .content p a img {
+    width: 22px;
+    margin-left: 2px; }
+
+  @media only screen and (max-width: 1280px) {
+    .job-link .icon {
+      width: 32px; }
+    .job-link .content {
+      margin-left: 6px; }
+    .job-link .content h5 {
+      font-size: 20px; }
+    .job-link .content p {
+      font-size: 14px; }
+    .job-link .content p a {
+      font-size: 15px; }
+    .job-link .content p a img {
+      width: 18px; } }
+
+  @media only screen and (max-width: 576px) {
+    .job-link .icon {
+      width: 26px; }
+    .job-link .content {
+      text-align: center;
+      margin-left: 6px; }
+    .job-link .content h5 {
+      font-size: 15px; }
+    .job-link .content p {
+      font-size: 14px; }
+    .job-link .content p a {
+      display: block;
+      font-size: 15px; }
+    .job-link .content p a img {
+      width: 18px; } }
+</style>
 <body class="home-page page basicpage light-theme" cz-shortcut-listen="true">
   <!-- Header -->
   <header id="oc-header" class="oc-header oh-theme-black">
@@ -263,23 +565,22 @@
   </header>
 
   <!-- === MAIN CONTENT === -->
-  <div id="oc-wrapper" class="">
+  <div id="oc-wrapper" class="style-override">
     <!-- Main Content -->
     <div class="main-content">
 
       <!-- Search bar -->
       <div class="section section-search-bar">
         <div class="wrapper">
-          <h2 class="title">Tìm kiếm</h2>
           <form method="GET" action="https://vieclam.oppomobile.vn/index/job">
             <div class="search-form">
 
               <div class="form-item">
-                <input type="text" name="name" placeholder="Từ khóa" id="" value="">
+                <input type="text" name="name" placeholder="Từ khóa" id="" class="custom-input" value="">
               </div>
               <div class="form-item">
 
-                <select name="category" id="category">
+                <select name="category" id="category" class="custom-input">
                   <option value="">-- Ngành nghề --</option>
                   <option value="1">Nhân sự </option>
                   <option value="2">Kế toán- Tài chính </option>
@@ -297,7 +598,7 @@
                 </select>
               </div>
               <div class="form-item">
-                <select name="location">
+                <select name="location" class="custom-input">
                   <option value="">-- Tỉnh/ Thành phố --</option>
                   <option value="89">An Giang </option>
                   <option value="77">Bà Rịa - Vũng Tàu </option>
@@ -365,8 +666,10 @@
                 </select>
 
               </div>
-              <div class="form-item">
-                <button type="submit"><span class="icon1 icon-search"></span><span class="sm-show"> Tìm kiếm</span></button>
+              <div class="form-item submit-form">
+                <button type="submit">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
               </div>
             </div>
           </form>
@@ -381,6 +684,7 @@
         <div class="wrapper">
           <h2 class="title center">Tìm kiếm từ khóa '<b style="color:red"></b>' : 20 kết quả</h2>
           <b style="color:red"> </b>
+
           <div class="job-list">
             <div class="job-list-head sm-hide">
               <div class="row">
@@ -456,7 +760,7 @@
                 <div class="row">
                   <div class="basic">
                     <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=462">Nhân Viên Bán Hàng - Tại Các Huyện Ngoại Thành (Hà Tây Cũ) - Gấp</a>
+                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=703">Nhân Viên Kinh Doanh - Hà Nội (Hà Tây Cũ)</a>
                     </div>
                     <div class="job-area">
                       <p>Hà Nội</p>
@@ -464,273 +768,30 @@
                   </div>
                   <div class="job-date">
                     <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=462" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
+                    <a href="/index/detail?id=703" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
 
                   </div>
 
                 </div>
               </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=793">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Đà Lạt</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Lâm Đồng</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">30/08/2020</p>
-                    <a href="/index/detail?id=793" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=790">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Hà Nội (Hợp đồng 6 tháng)</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hà Nội</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=790" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=535">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Hà Nội</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hà Nội</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=535" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=780">Digital Marketing Specialist - Hồ Chí Minh</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hồ Chí Minh</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">15/08/2020</p>
-                    <a href="/index/detail?id=780" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=791">Nhân Viên Tiếp Nhận Bảo Hành - Receptionist - Bình Dương</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Bình Dương</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=791" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=292">Nhân Viên Tư Vấn Bán Hàng - HCM2 - Quận 1, Quận 3, Quận 10, Tân Bình, Phú Nhuận</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hồ Chí Minh</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">30/08/2020</p>
-                    <a href="/index/detail?id=292" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=176">Tuyển dụng Nhân Viên Tư Vấn Bán Hàng - QUẬN 4- QUẬN 5 - QUẬN 7- NHÀ BÈ-  HCM</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hồ Chí Minh</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">15/08/2020</p>
-                    <a href="/index/detail?id=176" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=789">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Bình Dương</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Bình Dương</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=789" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=695">Chuyên viên tư vấn OPPO Brandshop - Quận 7</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hồ Chí Minh</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">15/08/2020</p>
-                    <a href="/index/detail?id=695" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=769">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Đồng Tháp</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Đồng Tháp</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=769" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=786">Kỹ Thuật Viên Sửa Chữa Điện Thoại - Cần Thơ</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Cần Thơ</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=786" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=293">Nhân Viên Bán Hàng -  HCM3 (Q2, Q9, Thủ Đức, Bình Thạnh)</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hồ Chí Minh</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=293" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=772">Nhân Viên Kinh Doanh - Hải Dương</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hải Dương</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">30/08/2020</p>
-                    <a href="/index/detail?id=772" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="job-card job-details">
-                <div class="row">
-                  <div class="basic">
-                    <div class="job-title">
-                      <a href="https://vieclam.oppomobile.vn/index/detail-new?id=138">Nhân Viên Kinh Doanh - HCM3 (Q2, Q9, Thủ Đức, Bình Thạnh)</a>
-                    </div>
-                    <div class="job-area">
-                      <p>Hồ Chí Minh</p>
-                    </div>
-                  </div>
-                  <div class="job-date">
-                    <p class="date_of_job" style="float:left;margin: 10px; margin-top: 15px">31/08/2020</p>
-                    <a href="/index/detail?id=138" class="button" style="float:right;margin-right: 10px;">Ứng tuyển</a>
-
-                  </div>
-
-                </div>
-              </div>
-
             </div>
           </div>
-          <div class="notification">
-            <p class="center">
-              Nếu hiện tại chưa có vị trí nào phù hợp, bạn vui lòng nộp hồ sơ
-              <a class="apply-btn" href="https://vieclam.oppomobile.vn/index/detail-new" target="_blank">Tại đây</a>,
-              OPPO sẽ liên hệ bạn khi có vị trí phù hợp.
-            </p>
+
+          <!--Link-->
+          <div class="job-link">
+            <div class="icon">
+              <img src="../img/home/bulb-ico.png" alt="" />
+            </div>
+            <div class="content">
+              <h5>CÙNG CHÚNG TÔI THỰC HIỆN <span>ĐAM MÊ </span>CỦA BẠN</h5>
+              <p>
+                Nếu hiện tại chưa có vị trí phù hợp, đừng ngần ngại ứng tuyển
+                <a href="#">
+                  Tại đây
+                  <img src="../img/arrow.png" alt="">
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

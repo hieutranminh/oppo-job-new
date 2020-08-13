@@ -1,19 +1,17 @@
-#hr-job-page {
-  .job-search {
-    background: #046A38;
-    padding: 1.5em;
-
-    &-layout {
+.style-override {
+  .section-search-bar {
+    background: transparent;
+    padding: 0;
+    .search-form {
       @include flex;
       justify-content: center;
       align-items: center;
       width: 920px;
       margin: auto;
-
-      .form-block {
+      padding: 20px 0;
+      .form-item {
         width: 210px;
         margin-right: 20px;
-
         .custom-input {
           background-color: #f8f8f8;
           border: none;
@@ -30,109 +28,119 @@
           font-size: 20px;
           padding: 3px 15px 0;
         }
-      }
-
-      .submit-form {
-        width: 60px;
-        height: 48px;
-        font-size: 22px;
-        background-color: #046a38;
-        border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -moz-border-radius: 8px;
-        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
-        @include flex;
-        justify-content: center;
-        align-items: center;
-        i {
-          color: #FFFFFF;
+        &.submit-form {
+          margin-right: 0;
+          width: 60px;
+          button {
+            width: 100%;
+            height: 48px;
+            font-size: 22px;
+            background-color: #046a38;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+            @include flex;
+            justify-content: center;
+            align-items: center;
+            i {
+              color: #ffffff;
+            }
+          }
         }
       }
     }
   }
+}
 
-  @media #{$information-sm-laptop} {
-    .job-search {
-      &-layout {
+@media #{$information-sm-laptop} {
+  .style-override {
+    .section-search-bar {
+      .search-form {
         @include flex;
         width: 860px;
-
-        .form-block {
+        .form-item {
           width: 180px;
           margin-right: 18px;
-
           .custom-input {
-            font-size: 18px;
             height: 42px;
             line-height: 42px;
+            font-size: 18px;
           }
-        }
-
-        .submit-form {
-          width: 54px;
-          height: 42px;
-          i {
-            color: #FFFFFF;
+          &.submit-form {
+            width: 54px;
+            button {
+              height: 42px;
+              font-size: 22px;
+            }
           }
         }
       }
     }
   }
+}
 
-  @media #{$information-tablet-pro} {
-    .job-search {
-      &-layout {
+@media #{$information-tablet-pro} {
+  .style-override {
+    .section-search-bar {
+      .search-form {
         width: 100%;
       }
     }
   }
+}
 
-  @media #{$information-tablet} {
-    .job-search {
-      &-layout {
-        width: 440px;
+@media #{$information-tablet} {
+  .style-override {
+    .section-search-bar {
+      .search-form {
+        width: 100%;
         flex-wrap: wrap;
-
-        .form-block {
+        padding: 20px;
+        .form-item {
           width: 100%;
-          margin-right: 0px;
+          margin-right: 0;
           margin-bottom: 30px;
-
           .custom-input {
             height: 50px;
-            font-size: 22px;
             line-height: 50px;
+            font-size: 22px;
           }
-        }
-
-        .submit-form {
-          width: 440px;
-          height: 50px;
+          &.submit-form {
+            width: 100%;
+            button {
+              height: 50px;
+            }
+          }
         }
       }
     }
   }
+}
 
-  @media #{$information-phone} {
-    .job-search {
-      &-layout {
+@media #{$information-phone} {
+  .style-override {
+    .section-search-bar {
+      .wrapper {
+        margin: 0;
+        padding: 0;
         width: 100%;
-
-        .form-block {
-          width: 100%;
-          margin-right: 0px;
-          margin-bottom: 20px;
-
-          .custom-input {
-            height: 42px;
-            font-size: 18px;
-            line-height: 42px;
+        .search-form {
+          padding: 30px;
+          .form-item {
+            margin-top: 0;
+            margin-bottom: 20px;
+            .custom-input {
+              height: 42px;
+              line-height: 42px;
+              font-size: 18px;
+            }
+            &.submit-form {
+              button {
+                height: 42px;
+              }
+            }
           }
-        }
-
-        .submit-form {
-          width: 100%;
-          height: 42px;
         }
       }
     }
